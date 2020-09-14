@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title *ngIf="id === '1'">Inscription</ion-title>
+    <ion-title *ngIf="id === '2'">Connexion</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="form">
+      <form [formGroup]="authForm" *ngIf="id === '1'">
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Adresse mail</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Mot de passe</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button full (click)="onSubmitForm()">Soumettre</ion-button>
+        <span ion-text color="danger">{{ errorMessage }}</span>
+      </form>
+    </div>
+    <div class="form">
+      <form [formGroup]="authForm" *ngIf="id === '2'">
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating" >Adresse mail</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Mot de passe</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button full (click)="onSubmitForm()">Soumettre</ion-button>
+        <span ion-text color="danger">{{ errorMessage }}</span>
+      </form>
+    </div>
+
+</ion-content>

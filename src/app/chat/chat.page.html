@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Discution</ion-title>
+    <ion-buttons slot="end">
+      <ion-button  (click)="onLogOut()">
+        Déconnexion
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="stream">
+    <ion-item lines="none" *ngFor="let message of messages">
+      <ion-badge text-wrap slot="start" color="light" *ngIf="message.userId != userId">{{ message.text }}</ion-badge>
+      <ion-badge text-wrap slot="end" color="primary" *ngIf="message.userId == userId">{{ message.text }}</ion-badge>
+    </ion-item>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10" class="input-col">
+        <ion-input [(ngModel)]="messageText" placeholder="Entrez votre message" type="text"></ion-input>
+      </ion-col>
+      <ion-col size="2" class="send-col">
+        <ion-button *ngIf="messageText!='' " shape="rounded" (click)="sendMessge()">
+          <ion-icon name="send" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

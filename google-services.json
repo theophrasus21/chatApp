@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1048425840911",
+    "firebase_url": "https://guiloumeni1.firebaseio.com",
+    "project_id": "guiloumeni1",
+    "storage_bucket": "guiloumeni1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048425840911:android:8961a10706fe52d7507e7a",
+        "android_client_info": {
+          "package_name": "com.futuras.yok"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048425840911-njngn25tgp9i27u8e5pf24jrh8ke7pe9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB65XMerNUX4KW7VZ3lclLKCDafuOjERKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048425840911-njngn25tgp9i27u8e5pf24jrh8ke7pe9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1048425840911-rs05ijq10ckqlr2rja56859kd0tveptf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.futuras.yok"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
